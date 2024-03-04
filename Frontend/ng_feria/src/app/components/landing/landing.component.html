@@ -1,0 +1,304 @@
+<a id="inicio"></a>
+<app-nav></app-nav>
+<div id="icon-menu">
+  <i class="fa-sharp fa-solid fa-arrow-up"></i>
+</div>
+<main class="main">
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img
+            src="../../../assets/img/camperon.jpg"
+            class="img-fluid imagen imgTop"
+            alt="Imagen de héroe"
+          />
+        </div>
+        <div class="col-md-6">
+          <h1 class="typewriter">Bienvenidos a FeriaOnline</h1>
+          <p class="texto">
+            Encontrá prendas únicas y apoyá la moda sostenible.
+            Gran variedad de marcas, estilos y tallas para todos los gustos. <br/>
+            Promociones especiales durante toda la feria, incluyendo descuentos y envío
+            gratuito. Regístrate ahora y recibe un cupón de descuento para tu
+            primera compra. <br/> <strong>¡Renová tu armario de manera sostenible!</strong>
+          </p>
+            <!-- Contenido que se mostrará solo si el usuario está registrado -->
+            <a class="btn btn-outline-secondary" *ngIf="isLoggedIn()" routerLink="/registro">Registrarse</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slider-section" id="ofertas">
+    <div class="container-slider">
+      <h1 class="h1-ofertas">Ofertas</h1>
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../../../../assets/img/carrusel01.webp" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="../../../assets/img/carrusel02.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="../../../assets/img/carrusel03.webp" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    </div>
+  </section>
+  <section id="beneficios" class="hero-section benefits-section" >
+    <div class="container">
+      <h2 class="text-center mb-5">Beneficios de nuestra página</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4" id="envio">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-shipping-fast fa-3x mb-3"></i>
+              <h4 class="card-title">Envío gratuito</h4>
+              <p class="card-text">
+                Ofrecemos envío gratuito en todos nuestros productos para que
+                puedas ahorrar aún más.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" id="soporte">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-headphones-alt fa-3x mb-3"></i>
+              <h4 class="card-title">Soporte 24/7</h4>
+              <p class="card-text">
+                Nuestro equipo de soporte está disponible las 24 horas del día,
+                los 7 días de la semana para ayudarte con cualquier problema.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" id="garantia">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-money-bill-alt fa-3x mb-3"></i>
+              <h4 class="card-title">Garantía de devolución de dinero</h4>
+              <p class="card-text">
+                Ofrecemos una garantía de devolución de dinero de 30 días para
+                que puedas comprar con confianza.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <a id="preguntas"></a>
+  <section class="faq">
+    <div class="container">
+      <div class="section-title">
+        <h2>Preguntas Frecuentes</h2>
+      </div>
+
+      <ul class="faq-list">
+        <li>
+          <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1"
+            >¿Tienen descuentos o promociones especiales para clientes
+            frecuentes? <i id="arrow-icon" class="fas fa-arrow-down"></i
+          ></a>
+          <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+            <p>
+              Sí, ofrecemos descuentos y promociones especiales para clientes
+              frecuentes. Mantente al tanto de nuestras redes sociales y
+              suscríbete a nuestro boletín para obtener las últimas promociones
+              y descuentos.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed"
+            >¿Cómo puedo saber si la prenda que quiero comprar me quedará bien?
+            <i id="arrow-icon" class="fas fa-arrow-down"></i
+          ></a>
+          <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+            <p>
+              En nuestra tienda en línea, puedes encontrar una guía de tallas
+              para ayudarte a encontrar el tamaño adecuado para ti. También
+              puedes contactarnos si tienes alguna pregunta sobre el tamaño o la
+              forma de la prenda.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed"
+            >¿Puedo devolver o cambiar una prenda?
+            <i id="arrow-icon" class="fas fa-arrow-down"></i
+          ></a>
+          <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+            <p>
+              Sí, ofrecemos devoluciones y cambios en la mayoría de los
+              productos. Por favor, revisa nuestras políticas de devolución y
+              cambio para obtener más información.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed"
+            >¿Qué medidas toman para proteger la privacidad y la seguridad de
+            mis datos personales?<i
+              id="arrow-icon"
+              class="fas fa-arrow-down"
+            ></i
+          ></a>
+          <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+            <p>
+              Nos tomamos muy en serio la privacidad y seguridad de los datos
+              personales de nuestros clientes. Utilizamos medidas de seguridad
+              de última generación para proteger tu información y nunca
+              compartimos tus datos con terceros sin tu consentimiento. Consulta
+              nuestra política de privacidad para obtener más información.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed"
+            >¿Cómo puedo hacer un seguimiento de mi pedido?
+            <i id="arrow-icon" class="fas fa-arrow-down"></i
+          ></a>
+          <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+            <p>
+              Una vez que realizas un pedido, te enviaremos un correo
+              electrónico de confirmación con los detalles de tu pedido y un
+              número de seguimiento. Puedes utilizar este número de seguimiento
+              para hacer un seguimiento de tu pedido en línea.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <a data-bs-toggle="collapse" data-bs-target="#faq6" class="collapsed"
+            >¿Cómo puedo contactar con ustedes si tengo alguna pregunta o
+            inquietud? <i id="arrow-icon" class="fas fa-arrow-down"></i
+          ></a>
+          <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+            <p>
+              Puedes contactar con nosotros en cualquier momento a nuestro numero de whatsapp
+              o enviándonos un correo electrónico a la dirección feriaonlineispc@gmail.com.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="testimonios">
+    <div class="testimonios_header">
+      <span>comentarios de nuestros clientes</span>
+    </div>
+    <div class="contenedor-tb" id="comentarios">
+      <div class="input-group-btn">
+        <button type="submit" name="button" class="btn-color btn-notify btn" *ngIf="isLoggedIn" data-bs-toggle="modal"
+        data-bs-target="#ModalComent">
+        <i class="fas fa-sun"></i> Agregar Comentario <i class="fas fa-sun"></i>
+      </button>
+      </div>
+      <!-- testimonios contenedor-->
+      <div class="testimonios_contenedor" id="comentarios">
+        <!--BOX 1-->
+        <div class="testimonios_caja" *ngFor="let comentarios of coments">
+          <div class="caja-top">
+            <div class="perfil">
+              <div class="perfil_img">
+                <img [src]="getAvatarImage(comentarios.client_avatar)" alt="imagen_usuario"/>
+              </div>
+              <!--NOMBRE USUARIO-->
+              <div class="name_user">
+                <strong>{{getNombre(comentarios.client_name)}}</strong>
+              </div>
+            </div>
+            <!--ESTRELLAS-->
+            <div class="estrellas">
+              <i class="fas fa-star" *ngFor="let index of [].constructor(comentarios.classification )"></i>
+            </div>
+          </div>
+          <!--COMENTARIOS-->
+          <div class="comentarios_clientes">
+            <p>{{comentarios.description+' '+getFecha(comentarios.created_at)}}</p>
+          </div>
+        </div>
+        <!--end box 1-->
+        <!--end box 4-->
+      </div>
+      <br />
+      <br />
+    </div>
+  </section>
+</main>
+<div class="modal fade" #myModal id="ModalComent" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          Agregar Comentario
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"  #closeModal
+        ></button>
+      </div>
+      <div class="modal-body">
+        <label for="message-text" class="col-form-label">Comentario:</label>
+        <form  (submit)="addComent(comentForm)"  #comentForm="ngForm">
+        <p class="clasificacion">
+          <input id="radio1" type="radio" name="estrellas" value="5"  [(ngModel)]="classification"/><!--
+            --><label for="radio1">★</label
+          ><!--
+            --><input id="radio2" type="radio" name="estrellas" value="4"  [(ngModel)]="classification"/><!--
+            --><label for="radio2">★</label
+          ><!--
+            --><input id="radio3" type="radio" name="estrellas" value="3"  [(ngModel)]="classification"/><!--
+            --><label for="radio3">★</label
+          ><!--
+            --><input id="radio4" type="radio" name="estrellas" value="2"  [(ngModel)]="classification"/><!--
+            --><label for="radio4">★</label
+          ><!--
+            --><input id="radio5" type="radio" name="estrellas" value="1"  [(ngModel)]="classification"/><!--
+            --><label for="radio5">★</label>
+        </p>
+
+        <textarea
+          class="form-control"
+          id="message-text"
+          placeholder="Ingrese un comentario" [(ngModel)]="description" name="description"
+        ></textarea>
+
+        <br />
+        <div class="input-btn-modal">
+          <button type="submit" name="button" class="btn-color btn-notify btn">
+            Agregar
+          </button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+</div> <!-- Fin Modal -->
+<a id="contactos"></a>
+<app-footer></app-footer>
+

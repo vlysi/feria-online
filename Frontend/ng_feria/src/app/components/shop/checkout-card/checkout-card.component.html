@@ -1,0 +1,27 @@
+<div class="">
+  <div class="modal-header">
+    <h5 class="modal-title">Transacción realizada con éxito</h5>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="modal"
+      aria-label="Close"
+      (click)="redirectToProducts()"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <h3>Detalles de la compra</h3>
+    <hr />
+    <div *ngFor="let item of items" class="detalles">
+      <span><b>Detalle: </b>{{ item.name }}</span>
+      <span> <b> IVA </b>${{ item.price*0.21}}</span>
+      <span ><b>Precio: </b>${{item.price}}</span>
+
+    </div>
+    <hr />
+    <h3><b>Total:</b> </h3> <h4 class="text-end">$ {{ amount }}</h4>
+  </div>
+  <div class="modal-footer">
+    <p>¡Gracias por confiar en <b>feriaOnline!</b></p>
+  </div>
+</div>

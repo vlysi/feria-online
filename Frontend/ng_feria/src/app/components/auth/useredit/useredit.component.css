@@ -1,0 +1,87 @@
+.wrapper {
+  background: #ececec;
+  padding: 20px 20px 0 20px;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex: 1;
+}
+
+.row {
+  width: 900px;
+  height: 620px;
+  height:fit-content;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.cabecera {
+  display: flex;
+  justify-content:flex-end;
+}
+
+.form-label {
+  font-size: 0.9rem;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  width: 35vmin;
+  height: 45px;
+  color: #fff;
+  font-weight: 600;
+  background: radial-gradient(circle, rgba(244, 157, 26, 1) 41%, rgba(255, 225, 237, 1) 100%);
+  border-radius: 5px;
+  transition: .4s;
+}
+
+.submit:hover {
+  transform: scale(1.1);
+}
+
+.containerUserImg {
+  position: relative;
+  display: inline-block;
+}
+
+.userImg {
+  width: 90px;
+  top: 30px;
+  left: 30px;
+}
+
+.edit-icon {
+  position: relative;
+  bottom: -15px;
+  right: 18px;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.edit-icon i {
+  color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+  .row {
+    max-width: 420px;
+  }
+
+  .cabecera {
+    display:flex;
+    justify-content:center;
+    padding-bottom: 10px;
+  } 
+  
+  .submit {
+    width: 25vmin;
+  }
+}

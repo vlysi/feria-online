@@ -1,0 +1,63 @@
+<app-nav></app-nav>
+
+<body>
+
+  <div class="container">
+    <h1>Carrito de compras</h1>
+<div class="container-table">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col" data-productos="imagen"><i class="fa-solid fa-image"></i></th>
+          <th scope="col" data-productos="nombre">Nombre</th>
+          <th scope="col" data-productos="precio">Precio</th>
+          <th scope="col" data-productos="precio">IVA 21%</th>
+          <th scope="col" data-productos="accion">Accion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td data-productos="imagen"><img src={{product.image}} alt=""></td>
+          <td data-productos="nombre">{{product.name}}</td>
+          <td data-productos="precio">$ {{product.price}}</td>
+          <td data-monto="iva">$ {{product.price * 0.21}}</td>
+          <button (click)="delItem(product.id)" class="text-danger border-0"><i class="fa-solid fa-trash-can"></i></button>
+          <!-- <td data-productos="accion" style="color: red;"><i class="fa-solid fa-trash-can"></i></td> -->
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="container-monto">
+      <div class="container-2">
+        <table class="table">
+          <thead>
+            <tr>
+              <th data-monto="monto" scope="col">Precio Total</th>
+              <th data-monto="iva" scope="col">IVA</th>
+              <th data-monto="total" scope="col">Total con IVA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-monto="monto">$ {{monto}}</td>
+              <td data-monto="iva">$ {{iva}}</td>
+              <td data-monto="iva">$ {{monto+iva}}</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="container-2 comp">
+          <div *ngIf="isLoggedIn">
+            <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+          </div>
+          <div *ngIf="!isLoggedIn">
+            <h6>Para poder finalizar tu compra </h6>
+            <button class="btn btn-outline-secondary me-2" routerLink="/iniciar-sesion">Iniciar sesión</button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+</body>
+<app-footer></app-footer>
